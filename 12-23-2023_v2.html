@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: #EEEEEE;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        .card {
+            position:relative;
+            width:330px;
+            height:412px;
+            background: #EEEEEE;
+            box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.25);
+            border-radius: 18px;
+            transition: 0.5s ease-out;
+        }
+
+        .card .image {
+            position:relative;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+        }
+
+        .card .image img {
+            position:absolute;
+            left:0;
+            top:0;
+            width:100%;
+            height:80%;
+            display:block;
+            border-top-left-radius: 18px;
+            border-top-right-radius: 18px;
+            transition: 0.5s;
+        }
+
+        .card .content {
+            position:absolute;
+            left:0;
+            bottom:0;
+            width:100%;
+            height:90px;
+            box-sizing:border-box;
+            transition: 0.5s cubic-bezier(.22,.68,0,1.71);
+            overflow:hidden;
+            padding:12px;
+            background: #EEEEEE;
+            border-bottom-left-radius:18px;
+            border-bottom-right-radius:18px;
+        }
+
+        h1 {
+            font-size:17px;
+            text-align:center;
+        }
+
+        .card.active .content {
+            width:100%;
+            height:60%;
+            left:0;
+            bottom:0;
+            text-align:center;
+        }
+
+        .card.active {
+            transform: scale(1.1);
+        }
+
+        p {
+            text-align:left;
+            font-size:15px;
+            padding:10px 20px;
+        }
+
+        button {
+            border:none;
+            background: #E5E5E5;
+            border-radius:18px;
+            padding:7px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" onclick="toggleCard(this)">
+            <div class="image">
+                <img src="https://i.pinimg.com/736x/1f/a5/eb/1fa5eb16020bb5894ab19750a3192093.jpg" alt="HR"/>
+            </div>
+            <div class="content">
+                <h1>Card One Title</h1>
+                <p>
+                    The best Lorem Ipsum Generator in all the sea! Heave this scurvy copyfiller fer yar next adventure and cajol yar clients into walking the plank with ev'ry layout! Configure above, then get yer pirate ipsum own the high seas, arg! walking the plank with ev'ry layout! Configure above, then get yer pirate ipsum...own the high seas, arg! The best Lorem Ipsum Generator in all the sea! - END
+                </p>
+                <button> Know More </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCard(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
